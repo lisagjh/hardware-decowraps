@@ -1,0 +1,45 @@
+@font-face {
+	font-family: 'Open Sans';
+	src: url(/fonts/OpenSans.woff2) format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+html {
+	/* === Base === */
+	--clr-bg: hsl(0, 0%, 96%); /* #F5F5F5 */
+	--clr-text: hsl(0, 0%, 0%); /* #000000 */
+
+	/* === Brand Colors === */
+	--clr-primary: hsl(68, 63%, 35%); /* #829320 */
+	--clr-primary-dark: hsl(68, 65%, 17%); /* #4A5412 */
+	--clr-primary-light: hsl(74, 38%, 80%); /* #DAE0B8 */
+
+	/* === Accent Colors === */
+	--clr-accent-blue: hsl(204, 89%, 50%); /* #0E8FF1 */
+	--clr-accent-purple: hsl(267, 37%, 64%); /* #A283C9 */
+	--clr-accent-peach: hsl(26, 74%, 65%); /* #E5975E */
+
+	/* === Supporting === */
+	--clr-support-olive: hsl(73, 63%, 15%); /* #383F0E */
+
+	/* === Neutrals === */
+	--clr-neutral-100: hsl(0, 0%, 94%); /* #F0F0F0 */
+	--clr-neutral-200: hsl(0, 0%, 97%); /* #F8F7F7 */
+	--clr-neutral-300: hsl(0, 0%, 98%); /* #FAFAFA */
+	--clr-neutral-400: hsl(0, 0%, 99%); /* #FCFCFC */
+}
+
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+}
+
+a {
+    color: var(--clr-accent-purple);
+}

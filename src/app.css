@@ -1,8 +1,30 @@
 @font-face {
 	font-family: 'Open Sans';
 	src: url(/fonts/OpenSans.woff2) format('woff2');
-	font-weight: normal;
-	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'DM Sans';
+	src: url('/fonts/DMSans.woff2') format('woff2');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'DM Sans Italic';
+	src: url('/fonts/DMSans-Italic.woff2') format('woff2');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'DM Serif Display';
+	src: url('/fonts/DMSerifDisplay-Regular.woff2') format('woff2');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'DM Serif Display Italic';
+	src: url('/fonts/DMSerifDisplay-Italic.woff2') format('woff2');
 	font-display: swap;
 }
 
@@ -44,9 +66,11 @@ html {
 
 	/* === Shadows === */
 	--shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+	--shadow-accent: 0 4px 6px rgba(35, 53, 12, 0.15), 0 1px 3px rgba(35, 53, 12, 0.15);
 
 	/* === Fonts === */
-	--font-family: 'Open Sans', sans-serif;
+	--heading-font-family: 'DM Serif Display', sans-serif;
+	--font-family: 'DM Sans', sans-serif;
 }
 
 * {
@@ -67,15 +91,25 @@ body {
 	padding-top: 6rem;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--heading-font-family);
+	text-box: trim-both cap alphabetic;
+}
+
 li {
 	list-style: none;
-	transition: all .25s ease-in-out;
+	transition: all 0.25s ease-in-out;
 }
 
 a {
 	color: var(--text);
 	text-decoration: none;
-	transition: all .25s ease-in-out;
+	transition: all 0.25s ease-in-out;
 
 	&:hover {
 		color: var(--primary-light);

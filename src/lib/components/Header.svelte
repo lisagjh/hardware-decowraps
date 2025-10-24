@@ -20,7 +20,7 @@
 
 	onMount(() => {
 		// intersection observer to highlight active section in nav
-		const sections = document.querySelectorAll('section[id]'); // get all sections with id
+		const sections = document.querySelectorAll('main section[id]'); // get all sections with id
 
 		const observerOptions = {
 			root: null,
@@ -96,6 +96,13 @@
 		cursor: pointer;
 	}
 
+    a.logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
 	.nav-links {
 		display: flex;
 		transition: all 0.3s ease-in-out;
@@ -133,7 +140,7 @@
 
 	a.active {
 		font-weight: bold;
-		color: var(--primary-color);
+		color: var(--primary);
 	}
 
 	@media (width < 40rem) {

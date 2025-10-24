@@ -34,6 +34,7 @@
 
 <section id="highlights" class="highlights">
 	<h2>Highlights</h2>
+    <p>Take a look at some of our personal favorites - just a small peek into our vast collection. </p>
 
 	<div class="wrapper">
 	    {#each themes as theme, index}

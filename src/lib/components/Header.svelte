@@ -77,6 +77,7 @@
 		border-radius: 8px;
 		position: fixed;
 		top: 0.5rem;
+		z-index: 100;
 	}
 
 	nav {

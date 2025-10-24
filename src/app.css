@@ -8,38 +8,80 @@
 
 html {
 	/* === Base === */
-	--clr-bg: hsl(0, 0%, 96%); /* #F5F5F5 */
-	--clr-text: hsl(0, 0%, 0%); /* #000000 */
+	--bg: hsl(0, 0%, 96%);
+	--text: hsl(0, 0%, 0%);
 
 	/* === Brand Colors === */
-	--clr-primary: hsl(68, 63%, 35%); /* #829320 */
-	--clr-primary-dark: hsl(68, 65%, 17%); /* #4A5412 */
-	--clr-primary-light: hsl(74, 38%, 80%); /* #DAE0B8 */
+	--primary: hsl(69, 64%, 35%);
+	--primary-dark: hsl(69, 65%, 15%);
+	--primary-light: hsl(69, 39%, 80%);
 
 	/* === Accent Colors === */
-	--clr-accent-blue: hsl(204, 89%, 50%); /* #0E8FF1 */
-	--clr-accent-purple: hsl(267, 37%, 64%); /* #A283C9 */
-	--clr-accent-peach: hsl(26, 74%, 65%); /* #E5975E */
+	--accent-blue: hsl(206, 89%, 35%);
+	--accent-blue-dark: hsl(206, 89%, 15%);
+	--accent-blue-light: hsl(206, 89%, 80%);
 
-	/* === Supporting === */
-	--clr-support-olive: hsl(73, 63%, 15%); /* #383F0E */
+	--accent-purple: hsl(267, 39%, 65%);
+	--accent-purple-dark: hsl(267, 39%, 15%);
+	--accent-purple-light: hsl(267, 39%, 80%);
+
+	--accent-peach: hsl(25, 72%, 65%);
+	--accent-peach-dark: hsl(25, 72%, 15%);
+	--accent-peach-light: hsl(25, 72%, 80%);
 
 	/* === Neutrals === */
-	--clr-neutral-100: hsl(0, 0%, 94%); /* #F0F0F0 */
-	--clr-neutral-200: hsl(0, 0%, 97%); /* #F8F7F7 */
-	--clr-neutral-300: hsl(0, 0%, 98%); /* #FAFAFA */
-	--clr-neutral-400: hsl(0, 0%, 99%); /* #FCFCFC */
+	/* low number = light, high number = dark */
+	--neutral-50: hsl(0, 0%, 99%);
+	--neutral-100: hsl(0, 0%, 97%);
+	--neutral-200: hsl(0, 0%, 94%);
+	--neutral-300: hsl(0, 0%, 88%);
+	--neutral-400: hsl(0, 0%, 74%);
+	--neutral-500: hsl(0, 0%, 60%);
+	--neutral-600: hsl(0, 0%, 45%);
+	--neutral-700: hsl(0, 0%, 30%);
+	--neutral-800: hsl(0, 0%, 20%);
+	--neutral-900: hsl(0, 0%, 10%);
+
+	/* === Shadows === */
+	--shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+
+	/* === Fonts === */
+	--font-family: 'Open Sans', sans-serif;
 }
 
 * {
-	font-family: 'Open Sans', sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: var(--font-family);
 }
 
 body {
-    background-color: var(--clr-bg);
-    color: var(--clr-text);
+	background-color: var(--bg);
+	color: var(--text);
+	line-height: 1.6;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 6rem;
+}
+
+li {
+	list-style: none;
+	transition: all .25s ease-in-out;
 }
 
 a {
-    color: var(--clr-accent-purple);
+	color: var(--text);
+	text-decoration: none;
+	transition: all .25s ease-in-out;
+
+	&:hover {
+		color: var(--primary-light);
+	}
+}
+
+a:hover {
+	color: var(--primary);
 }

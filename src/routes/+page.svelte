@@ -1,9 +1,15 @@
+<script>
+	import Highlights from "$lib/components/Highlights.svelte";
+
+</script>
 <section id="hero" class="hero">
-	<div class="hero-text">
-		<h1>Explore our collection</h1>
-		<p>
-			Discover our showroom pieces, select your favorites and prepare your next project request.
-		</p>
+	<div class="hero-content">
+		<div class="text">
+			<h1>Explore our collection</h1>
+			<p>
+				Discover our showroom pieces, select your favorites and prepare your next project request.
+			</p>
+		</div>
 		<div class="buttons">
 			<a href="#showroom">View our Showroom</a>
 			<a href="#contact">Contact</a>
@@ -17,26 +23,29 @@
 	/>
 </section>
 
-<section id="highlights">
-	<h2>Our Highlights</h2>
-	<p>Wow so cool</p>
-</section>
+<Highlights />
 
 <style>
 	section {
 		margin-top: 2rem;
 		display: flex;
 		flex-direction: column;
-		gap: 1.5rem;
+		gap: 2rem;
 		padding: 1rem;
 		min-height: 75vh;
 		width: 100%;
 	}
 
-	.hero .hero-text {
+	.hero .hero-content {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
+		gap: 1.5rem;
+
+		& .text {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
 	}
 
 	.buttons {
@@ -57,15 +66,29 @@
 			color: var(--text);
 		}
 
-        a:last-of-type {
-            background-color: var(--bg);
-            color: var(--text);
-            box-shadow: var(--shadow-accent);
-        }
+		a:last-of-type {
+			background-color: var(--bg);
+			color: var(--text);
+			box-shadow: var(--shadow-accent);
+		}
 	}
 
 	.hero img {
 		width: 100%;
 		border-radius: 6px;
 	}
+
+    @media (width >35rem) {
+        .hero {
+            flex-direction: row;
+            align-items: center;
+            min-height: fit-content;
+
+            & img {
+                max-width: 50%;
+                height: fit-content;
+                object-fit: cover;
+            }
+        }
+    }
 </style>

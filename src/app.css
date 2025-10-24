@@ -35,7 +35,7 @@ html {
 
 	/* === Brand Colors === */
 	--primary: hsl(69, 64%, 35%);
-	--primary-dark: hsl(69, 65%, 15%);
+	--primary-dark: hsl(69, 65%, 20%);
 	--primary-light: hsl(69, 39%, 80%);
 
 	/* === Accent Colors === */
@@ -91,6 +91,26 @@ body {
 	padding-top: 6rem;
 }
 
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+	width: 100%;
+	max-width: 75rem;
+	padding: 0 1rem;
+}
+
+main > section {
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding: 1rem;
+	width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -118,4 +138,9 @@ a {
 
 a:hover {
 	color: var(--primary);
+}
+
+button {
+	border-radius: 4px;
+	padding: 0.5rem 1rem;
 }

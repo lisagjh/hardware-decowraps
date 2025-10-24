@@ -68,8 +68,8 @@
 <style>
 	header {
 		display: flex;
-		width: 100%;
-		max-width: 95vw;
+		width: 95%;
+		max-width: 80rem;
 		padding: 1rem;
 		margin-top: 1rem;
 		background-color: var(--neutral-50);

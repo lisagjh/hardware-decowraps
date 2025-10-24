@@ -59,6 +59,7 @@
 			text-align: center;
 			padding: 0.5rem 1rem;
 			border-radius: 8px;
+			font-size: .9rem;
 		}
 
 		a:first-of-type {
@@ -75,10 +76,12 @@
 
 	.hero img {
 		width: 100%;
+		max-height: 30rem;
+		object-fit: cover;
 		border-radius: 6px;
 	}
 
-    @media (width >35rem) {
+    @media (width > 42rem) {
         .hero {
             flex-direction: row;
             align-items: center;

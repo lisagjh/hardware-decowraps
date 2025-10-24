@@ -138,26 +138,20 @@
 		}
 	}
 
+	/* animation needs some work, gives terrible flash rn */
 	@media (width > 47rem) {
 		.wrapper {
 			flex-direction: row;
-			height: 500px; /* Of een andere gewenste hoogte */
 		}
 
 		details {
 			display: flex;
 			flex-direction: row;
 			transition: flex 0.3s ease;
-			flex: 0 0 auto;
 		}
 
 		details:not([open]) {
-			flex: 0 0 auto;
 			width: auto;
-		}
-
-		details[open] {
-			flex: 1;
 		}
 
 		summary {
@@ -205,13 +199,12 @@
 			transition: all 0.3s ease;
 			overflow-y: auto;
 
-            & img {
-                height: 100%;
-                width: 100%;
-                max-width: 100%;
-                object-fit: cover;
-
-            }
+			& img {
+				height: 100%;
+				width: 100%;
+				max-width: 100%;
+				object-fit: cover;
+			}
 
 			& button {
 				background-color: var(--theme-color-dark);
@@ -223,10 +216,6 @@
 				align-self: flex-end;
 				cursor: pointer;
 			}
-		}
-
-		details[open] .content {
-			height: 100%;
 		}
 	}
 </style>

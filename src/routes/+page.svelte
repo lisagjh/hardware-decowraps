@@ -1,7 +1,7 @@
 <script>
-	import Highlights from "$lib/components/Highlights.svelte";
-
+	import Highlights from '$lib/components/Highlights.svelte';
 </script>
+
 <section id="hero" class="hero">
 	<div class="hero-content">
 		<div class="text">
@@ -59,7 +59,7 @@
 			text-align: center;
 			padding: 0.5rem 1rem;
 			border-radius: 8px;
-			font-size: .9rem;
+			font-size: 0.9rem;
 		}
 
 		a:first-of-type {
@@ -81,17 +81,17 @@
 		border-radius: 6px;
 	}
 
-    @media (width > 42rem) {
-        .hero {
-            flex-direction: row;
-            align-items: center;
-            min-height: fit-content;
+	@media (width > 42rem) {
+		.hero {
+			flex-direction: row;
+			align-items: center;
+			min-height: fit-content;
 
-            & img {
-                max-width: 50%;
-                height: fit-content;
-                object-fit: cover;
-            }
-        }
-    }
+			& img {
+				max-width: 50%;
+				height: fit-content;
+				object-fit: cover;
+			}
+		}
+	}
 </style>

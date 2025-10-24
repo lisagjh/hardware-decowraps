@@ -35,28 +35,36 @@
 <section id="highlights" class="highlights">
 	<h2>Highlights</h2>
 
-	{#each themes as theme, index}
-		<details
-			class="highlight"
-			style="--theme-color: var(--{theme.color}); --theme-color-dark: var(--{theme.color}-dark); --theme-color-light: var(--{theme.color}-light);"
-			open={index === 0}
-			name="themes"
-		>
-			<summary class="text">
-				<h3>{theme.name}</h3>
-				<p><span>{theme.name}</span></p>
-			</summary>
-			<div class="content">
-				<p>{theme.description}</p>
-				<img src={theme.image} alt={theme.alt} />
-				<button>See More</button>
-			</div>
-		</details>
-	{/each}
+	<div class="wrapper">
+	    {#each themes as theme, index}
+    		<details
+    			class="highlight"
+    			style="--theme-color: var(--{theme.color}); --theme-color-dark: var(--{theme.color}-dark); --theme-color-light: var(--{theme.color}-light);"
+    			open={index === 0}
+    			name="themes"
+    		>
+    			<summary class="text">
+    				<h3>{theme.name}</h3>
+    				<p><span>{theme.name}</span></p>
+    			</summary>
+    			<div class="content">
+    				<p>{theme.description}</p>
+    				<img src={theme.image} alt={theme.alt} />
+    				<button>See More</button>
+    			</div>
+    		</details>
+    	{/each}
+	</div>
 </section>
 
 <style>
-	.highlights {
+    .highlights {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+	.wrapper {
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
@@ -80,13 +88,13 @@
 		display: flex;
 	}
 
-	@media (width < 35rem) {
+	@media (width < 47rem) {
 		p:has(span) {
 			display: none;
 		}
 	}
 
-	.text {
+	summary {
 		color: var(--neutral-100);
 		background-color: var(--theme-color);
 		display: flex;
@@ -94,7 +102,7 @@
 		padding: 1rem;
 	}
 
-    /* animation needs some work, doesnt always work and often not on closing */
+	/* animation needs some work, doesnt always work and often not on closing */
 	.content {
 		background-color: var(--theme-color-light);
 		display: flex;
@@ -125,9 +133,49 @@
 
 		details[open] .content {
 			height: auto;
-            padding: 1rem;
+			padding: 1rem;
 		}
 	}
 
-    /*  */
+	@media (width > 47rem) {
+        .wrapper {
+            flex-direction: row;
+            overflow: scroll;
+        }
+
+		details {
+            display: flex;
+			flex-direction: row;
+            width: fit-content;
+		}
+
+        summary {
+            position: relative;
+            width: fit-content;
+            padding: 1rem .5rem;
+
+            & h3 {
+                font-family: var(--font-family);
+                font-size: .85rem;
+            }
+
+            & p {
+                position: absolute;
+                transform: rotate(-90deg);
+                bottom: 2rem;
+                left: 50%;
+                translate: -50% -50%;
+                font-size: 2.5rem;
+                text-transform: uppercase;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+	}
+
+    .highlights {
+        margin-bottom: 100rem;
+    }
 </style>

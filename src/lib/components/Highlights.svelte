@@ -150,16 +150,13 @@
 			transition: flex 0.3s ease;
 		}
 
-		details:not([open]) {
-			width: auto;
-		}
-
 		summary {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: end;
 			padding: 1rem 0.5rem;
+            width: fit-content;
 			cursor: pointer;
 			position: relative;
 
